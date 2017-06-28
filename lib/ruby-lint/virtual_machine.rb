@@ -556,6 +556,7 @@ module RubyLint
     # @param [RubyLint::AST::Node] node
     #
     def on_def(node)
+      #puts "virtual_machine_on_def"
       receiver = nil
 
       if node.type == :defs
@@ -639,6 +640,7 @@ module RubyLint
     #
     def on_send(node)
       name     = node.children[1].to_s
+      #puts "tripIt" << name
       name     = SEND_MAPPING.fetch(name, name)
       callback = "on_send_#{name}"
 
@@ -1214,7 +1216,7 @@ Received: #{arguments.length}
       location = {
         :line   => node.line,
         :column => node.column,
-        :file   => node.file
+        :file   => node.file,
       }
 
       # Add the call to the current scope if we're dealing with a writable

@@ -8,13 +8,14 @@ module RubyLint
   #  @return [RubyLint::Configuration]
   #
   class Runner
-    attr_reader :configuration
+    attr_reader :configuration, :vm
 
     ##
     # @param [RubyLint::Configuration] configuration
     #
     def initialize(configuration)
       @configuration = configuration
+      @vm = []
     end
 
     ##
@@ -27,6 +28,7 @@ module RubyLint
       report    = Report.new(configuration.report_levels)
       presenter = configuration.presenter.new
       parser    = Parser.new
+      #puts "runner-analyze"
 
       parser.consumer = proc do |diag|
         report_diagnostic(diag, report)
@@ -55,7 +57,10 @@ module RubyLint
 
       comments.merge!(extra_comments)
 
-      vm = run_vm(extra_ast, comments)
+      @vm = run_vm(extra_ast, comments)
+      #puts "VM"
+      defI = @vm.definitions
+
 
       run_analysis(ast, vm, report)
     end

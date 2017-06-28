@@ -2,6 +2,7 @@
 directories:
   - lib
 
+
 ignore_paths:
   - lib/ruby-lint/definitions
   - lib/ruby-lint/cli

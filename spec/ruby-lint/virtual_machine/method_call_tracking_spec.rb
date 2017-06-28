@@ -1,4 +1,4 @@
-require 'spec_helper'
+require '../../spec_helper'
 
 describe RubyLint::VirtualMachine do
   context 'method call tracking' do

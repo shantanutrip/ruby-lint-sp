@@ -6,7 +6,7 @@ module RubyLint
   #  @return [Hash|Slop]
   #
   class Command
-    attr_reader :options
+    attr_reader :options, :vm
 
     ##
     # @return [Hash]
@@ -33,6 +33,7 @@ module RubyLint
     #
     def initialize(options = {})
       @options = options
+      @vm = []
     end
 
     ##
@@ -41,14 +42,17 @@ module RubyLint
     # @param [Array] args
     #
     def run(args)
+      #puts "command-run"
       start_time    = Time.now.to_f
       files         = extract_files(args)
       configuration = load_configuration
 
       configure(configuration, options)
 
+
       runner    = Runner.new(configuration)
       output    = runner.analyze(files)
+      @vm = runner.vm
       exec_time = Time.now.to_f - start_time
       status    = 0
 
@@ -59,7 +63,7 @@ module RubyLint
 
       show_benchmark_info(exec_time) if options[:benchmark]
 
-      exit(status)
+      #exit(status)
     end
 
     ##

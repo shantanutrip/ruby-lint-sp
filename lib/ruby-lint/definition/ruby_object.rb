@@ -1,3 +1,4 @@
+require_relative '../../../definition_list_class'
 module RubyLint
   module Definition
     ##
@@ -226,6 +227,8 @@ module RubyLint
       #
       def add(type, name, value)
         type = type.to_sym
+        #puts "/home/shantanu/ruby-lint/lib/ruby-lint/definition/ruby_object.rb"
+        #puts type, name, value
 
         unless value.is_a?(RubyObject)
           raise TypeError, "Expected RubyObject but got #{value.class}"
@@ -236,6 +239,8 @@ module RubyLint
         end
 
         definitions[type][name] = value
+
+        DefinitionListClass.defHashAdd(type, name, value)
 
         if update_parents.include?(type)
           update_parent_definitions(type, name, value)
@@ -277,6 +282,7 @@ module RubyLint
       def lookup(type, name, lookup_parent = true, exclude = [])
         type, name = prepare_lookup(type, name)
         found      = nil
+        #puts type, name
 
         if defines?(type, name)
           found = definitions[type][name]
@@ -298,7 +304,8 @@ module RubyLint
             end
           end
         end
-
+        #puts "ruby_object-lookup"
+        #puts found
         return found
       end
 
@@ -471,6 +478,7 @@ module RubyLint
         other.definitions.each do |type, values|
           values.each do |name, definition|
             definitions[type][name] = definition
+            DefinitionListClass.defHashAdd(type, name, definition)
           end
         end
       end
