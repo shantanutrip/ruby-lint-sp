@@ -132,7 +132,7 @@ module RubyLint
         :name,
         :type
 
-      attr_accessor :instance_type, :parents, :reference_amount
+      attr_accessor :instance_type, :parents, :reference_amount, :set_by
 
       ##
       # Creates an object that represents an unknown value.
@@ -164,6 +164,7 @@ module RubyLint
         @instance_type    ||= :class
         @parents          ||= []
         @reference_amount ||= 0
+        @set_by = [self]
 
         @definitions = Hash.new { |hash, key| hash[key] = {} }
         @value       = nil if members_as_value

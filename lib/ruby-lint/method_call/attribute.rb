@@ -93,7 +93,9 @@ module RubyLint
           ivar = Definition::RubyObject.new(
             :type             => :ivar,
             :name             => ivar_name,
-            :reference_amount => 1
+            :reference_amount => 1,
+            :line => node.loc.line,
+            :column => node.loc.column
           )
 
           context.add_definition(ivar)

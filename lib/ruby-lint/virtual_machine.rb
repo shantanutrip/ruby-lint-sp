@@ -301,6 +301,27 @@ module RubyLint
       end
     end
 
+    ##
+    # Processes += , -=, *=, /=
+    # {#on_opasgn}.
+    #
+
+    def on_op_asgn
+      #p "on_op_asgn"
+      add_stacks
+    end
+
+
+    def after_op_asgn
+      #p "after_op_asgn"
+      variable = variable_stack.pop.first
+      value    = value_stack.pop.first
+
+      if variable and value
+        shorthand_assignment(variable, value)
+      end
+    end
+
     def on_or_asgn
       add_stacks
     end
@@ -950,6 +971,16 @@ Received: #{arguments.length}
         # `value` is not for conditional assignments as those are handled
         # manually.
         variable.value = value if value
+        variable.set_by << Definition::RubyObject.new(
+          :type             => type,
+          :name             => name,
+          :value            => value,
+          :instance_type    => :instance,
+          :reference_amount => 0,
+          :line             => node.line,
+          :column           => node.column,
+          :file             => node.file
+        )
       else
         variable = Definition::RubyObject.new(
           :type             => type,
@@ -961,6 +992,7 @@ Received: #{arguments.length}
           :column           => node.column,
           :file             => node.file
         )
+        #definitions[type][name] = variable
       end
 
       buffer_assignment_value(value)
@@ -1042,6 +1074,26 @@ Received: #{arguments.length}
     end
 
     ##
+    # Performs a shorthand assignment.
+    #
+    # @param [RubyLint::Definition::RubyObject] variable
+    # @param [RubyLint::Definition::RubyValue] value
+    #
+    #
+
+    def shorthand_assignment(variable, value)
+      variable.reference_amount += 1
+
+      if current_scope.has_definition?(variable.type, variable.name)
+        variable.value = value
+
+        current_scope.add_definition(variable)
+
+        buffer_assignment_value(variable.value)
+      end
+    end
+
+    ##
     # Performs a conditional assignment.
     #
     # @param [RubyLint::Definition::RubyObject] variable
@@ -1049,6 +1101,7 @@ Received: #{arguments.length}
     # @param [TrueClass|FalseClass] bool When set to `true` existing variables
     #  will be overwritten.
     #
+
     def conditional_assignment(variable, value, bool = true)
       variable.reference_amount += 1
 
