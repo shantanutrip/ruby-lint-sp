@@ -63,7 +63,7 @@ definitions.each{|type, lst|
     puts type
     lst.each{|name, values|
       #puts name
-      if name != 'temp'
+      if name != '$glob'
         next
       end
       puts name
@@ -77,8 +77,8 @@ definitions.each{|type, lst|
         puts "usage"
         @cnt += 1
         puts "set no. " << @cnt.to_s
-        if value.is_a?(RubyLint::Definition::RubyMethod)
-          (value.uses).each{|pos|
+        if value.is_a?(RubyLint::Definition::RubyObject)
+          (value.use_by).each{|pos|
             p pos.line
             p pos.column
             p pos.file

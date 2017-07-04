@@ -645,6 +645,8 @@ module RubyLint
       end
 
       define_method("after_#{type}") do |node|
+        value = value_stack.pop.first
+        name = node.children[0].to_s
         var   = Definition::RubyObject.new(
           :type          => :lvar,
           :name          => name,
@@ -1161,6 +1163,23 @@ Received: #{arguments.length}
         definition.reference_amount += 1
         if @latestMethod != nil and !((@latestMethod.uses).include?definition) and definition.type != :const
           @latestMethod.uses << definition
+        end
+        if definition.type != :const
+          variable = definition
+          p "TripTrip"
+          p definition
+          p node
+begin
+          variable.use_by << Definition::RubyObject.new(
+            :type             => node.type,
+            :name             => node.children[0].to_s,
+            :instance_type    => :instance,
+            :reference_amount => 0,
+            :line             => node.line,
+            :column           => node.column,
+            :file             => node.file
+          )
+end
         end
       end
     end
