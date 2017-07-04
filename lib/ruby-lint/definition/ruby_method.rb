@@ -21,7 +21,7 @@ module RubyLint
     #   method.
     #
     class RubyMethod < RubyObject
-      attr_reader :calls, :callers, :return_value, :visibility
+      attr_reader :calls, :callers, :return_value, :visibility, :uses
 
       ##
       # Called after a new instance of this class is created.
@@ -29,6 +29,7 @@ module RubyLint
       def after_initialize
         @calls   = []
         @callers = []
+        @uses = []
       end
 
       ##

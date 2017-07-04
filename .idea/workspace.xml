@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="583c32ea-c239-4cfb-8200-6ae382240cd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/ruby-lint/definition/ruby_object.rb" afterPath="$PROJECT_DIR$/lib/ruby-lint/definition/ruby_object.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/ruby-lint/method_call/attribute.rb" afterPath="$PROJECT_DIR$/lib/ruby-lint/method_call/attribute.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/ruby-lint/definition/ruby_method.rb" afterPath="$PROJECT_DIR$/lib/ruby-lint/definition/ruby_method.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/ruby-lint/virtual_machine.rb" afterPath="$PROJECT_DIR$/lib/ruby-lint/virtual_machine.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ruby-lint.yml" afterPath="$PROJECT_DIR$/ruby-lint.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ruby_req.rb" afterPath="$PROJECT_DIR$/ruby_req.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +19,7 @@
     <SUITE FILE_PATH="coverage/ruby_lint@hash_attempt.coverage" NAME="hash_attempt Coverage Results" MODIFIED="1498040416250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ruby-lint" />
     <SUITE FILE_PATH="coverage/ruby_lint@ruby_req.coverage" NAME="ruby_req Coverage Results" MODIFIED="1498644098440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ruby-lint" />
     <SUITE FILE_PATH="coverage/ruby_lint@attempt_it.coverage" NAME="attempt_it Coverage Results" MODIFIED="1498573564854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ruby-lint" />
-    <SUITE FILE_PATH="coverage/ruby_lint_sp@ruby_req.coverage" NAME="ruby_req Coverage Results" MODIFIED="1498824805665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ruby-lint" />
+    <SUITE FILE_PATH="coverage/ruby_lint_sp@ruby_req.coverage" NAME="ruby_req Coverage Results" MODIFIED="1499086895433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="ruby-lint" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
@@ -29,18 +27,18 @@
       <file leaf-file-name="virtual_machine.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ruby-lint/virtual_machine.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="987" column="37" lean-forward="true" selection-start-line="987" selection-start-column="37" selection-end-line="987" selection-end-column="37" />
+            <state relative-caret-position="-4027">
+              <caret line="633" column="9" lean-forward="true" selection-start-line="633" selection-start-column="9" selection-end-line="633" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ruby_method.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/ruby-lint/definition_builder/ruby_method.rb">
+      <file leaf-file-name="ruby_req.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ruby_req.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+            <state relative-caret-position="126">
+              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -49,28 +47,8 @@
       <file leaf-file-name="iterator.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ruby-lint/iterator.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-43">
-              <caret line="95" column="7" lean-forward="true" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ruby_object.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/ruby-lint/definition/ruby_object.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="166" column="24" lean-forward="true" selection-start-line="166" selection-start-column="24" selection-end-line="166" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ruby_req.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ruby_req.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="94" column="30" lean-forward="false" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+            <state relative-caret-position="2232">
+              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/definition_list_class.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -89,7 +67,7 @@
       <file leaf-file-name="command.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ruby-lint/command.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
+            <state relative-caret-position="954">
               <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
               <folding />
             </state>
@@ -99,8 +77,8 @@
       <file leaf-file-name="runner.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ruby-lint/runner.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="129" column="11" lean-forward="true" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="11" />
+            <state relative-caret-position="2556">
+              <caret line="142" column="25" lean-forward="false" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -117,22 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>@scopes</find>
-      <find>asign</find>
-      <find>value</find>
-      <find>@type</find>
-      <find>assign</find>
-      <find>definitions[</find>
-      <find>definition</find>
-      <find>run</find>
-      <find>@</find>
-      <find>@@</find>
-      <find>@@de</find>
-      <find>@@def</find>
-      <find>@def</find>
-      <find>def</find>
-      <find>defH</find>
-      <find>defHa</find>
       <find>defHas</find>
       <find>defHash</find>
       <find>after_assign</find>
@@ -145,8 +107,24 @@
       <find>op_asgn</find>
       <find>op_as</find>
       <find>on_op</find>
-      <find>on_def</find>
       <find>set_by</find>
+      <find>on_ass</find>
+      <find>build</find>
+      <find>on_def</find>
+      <find>after</find>
+      <find>variable</find>
+      <find>@lates</find>
+      <find>set_</find>
+      <find>ivar</find>
+      <find>current.cop</find>
+      <find>ASSIGNMENT_</find>
+      <find>add</find>
+      <find>on_</find>
+      <find>@latestMethod</find>
+      <find>$glob</find>
+      <find>@latest</find>
+      <find>@latestMe</find>
+      <find>after_def</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/ruby-lint/definition_builder/ruby_method.rb" />
         <option value="$PROJECT_DIR$/lib/ruby-lint/analysis/unused_variables.rb" />
         <option value="$PROJECT_DIR$/spec/ruby-lint/virtual_machine/method_call_tracking_spec.rb" />
         <option value="$PROJECT_DIR$/hash_attempt.rb" />
@@ -170,9 +147,11 @@
         <option value="$PROJECT_DIR$/lib/ruby-lint/runner.rb" />
         <option value="$PROJECT_DIR$/ruby-lint.yml" />
         <option value="$PROJECT_DIR$/lib/ruby-lint/method_call/attribute.rb" />
-        <option value="$PROJECT_DIR$/ruby_req.rb" />
-        <option value="$PROJECT_DIR$/lib/ruby-lint/virtual_machine.rb" />
         <option value="$PROJECT_DIR$/lib/ruby-lint/definition/ruby_object.rb" />
+        <option value="$PROJECT_DIR$/lib/ruby-lint/definition_builder/ruby_method.rb" />
+        <option value="$PROJECT_DIR$/lib/ruby-lint/definition/ruby_method.rb" />
+        <option value="$PROJECT_DIR$/lib/ruby-lint/virtual_machine.rb" />
+        <option value="$PROJECT_DIR$/ruby_req.rb" />
       </list>
     </option>
   </component>
@@ -207,8 +186,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,7 +301,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1001,16 +980,17 @@
       <workItem from="1498641626410" duration="3211000" />
       <workItem from="1498649451363" duration="7975000" />
       <workItem from="1498728662020" duration="20363000" />
-      <workItem from="1498813147500" duration="7079000" />
+      <workItem from="1498813147500" duration="8583000" />
+      <workItem from="1499066188765" duration="12936000" />
+      <workItem from="1499085045253" duration="4590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165097000" />
+    <option name="totallyTimeSpent" value="184127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1020,13 +1000,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07739938" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="87" y="237" width="1255" height="596" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35913312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="87" y="237" width="1255" height="596" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34365326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30340558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25577688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.263745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1368,14 +1348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/definition/ruby_method.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="152" column="8" lean-forward="false" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ruby-lint/nested_stack.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1387,23 +1359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/command.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/runner.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="129" column="11" lean-forward="true" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1411,6 +1366,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="86" column="25" lean-forward="false" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/definition_builder/ruby_method.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/definition/ruby_method.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2334">
+          <caret line="136" column="11" lean-forward="false" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/command.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/runner.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2556">
+          <caret line="142" column="25" lean-forward="false" selection-start-line="142" selection-start-column="24" selection-end-line="142" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/iterator.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2232">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1418,47 +1410,31 @@
     <entry file="file://$PROJECT_DIR$/definition_list_class.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ruby_req.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="94" column="30" lean-forward="false" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ruby-lint/definition/ruby_object.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="166" column="24" lean-forward="true" selection-start-line="166" selection-start-column="24" selection-end-line="166" selection-end-column="24" />
+        <state relative-caret-position="123">
+          <caret line="496" column="10" lean-forward="false" selection-start-line="496" selection-start-column="10" selection-end-line="496" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ruby-lint/virtual_machine.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="987" column="37" lean-forward="true" selection-start-line="987" selection-start-column="37" selection-end-line="987" selection-end-column="37" />
+        <state relative-caret-position="-4027">
+          <caret line="633" column="9" lean-forward="true" selection-start-line="633" selection-start-column="9" selection-end-line="633" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/iterator.rb">
+    <entry file="file://$PROJECT_DIR$/ruby_req.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43">
-          <caret line="95" column="7" lean-forward="true" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ruby-lint/definition_builder/ruby_method.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+        <state relative-caret-position="126">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="27" />
           <folding />
         </state>
       </provider>

@@ -245,6 +245,13 @@ module RubyLint
       alias_method :"after_#{callback}", :after_assign
     end
 
+=begin
+    def on_ivar(node)
+      p "on_ivar"
+      p node
+    end
+=end
+
     ##
     # Processes the assignment of a constant.
     #
@@ -580,6 +587,7 @@ module RubyLint
       #puts "virtual_machine_on_def"
       receiver = nil
 
+
       if node.type == :defs
         receiver = evaluate_node(node.children[0])
       end
@@ -593,6 +601,8 @@ module RubyLint
       )
 
       definition = builder.build
+
+      @latestMethod = definition
 
       builder.scope.add_definition(definition)
 
@@ -622,6 +632,10 @@ module RubyLint
       EXPORT_VARIABLES.each do |type|
         current.copy(previous, type)
       end
+      #puts "after_def"
+      #p @latestMethod
+      #p @latestMethod.uses
+      @latestMethod = nil
     end
 
     # Creates callbacks for various argument types such as :arg and :optarg.
@@ -631,8 +645,6 @@ module RubyLint
       end
 
       define_method("after_#{type}") do |node|
-        value = value_stack.pop.first
-        name  = node.children[0].to_s
         var   = Definition::RubyObject.new(
           :type          => :lvar,
           :name          => name,
@@ -995,6 +1007,10 @@ Received: #{arguments.length}
         #definitions[type][name] = variable
       end
 
+      if (@latestMethod != nil and !((@latestMethod.uses).include?variable) and variable.type != :const)
+        @latestMethod.uses << variable
+      end
+
       buffer_assignment_value(value)
 
       # Primarily used by #after_send to support variable assignments as method
@@ -1143,6 +1159,9 @@ Received: #{arguments.length}
 
       if definition and !definition.frozen?
         definition.reference_amount += 1
+        if @latestMethod != nil and !((@latestMethod.uses).include?definition) and definition.type != :const
+          @latestMethod.uses << definition
+        end
       end
     end
 
